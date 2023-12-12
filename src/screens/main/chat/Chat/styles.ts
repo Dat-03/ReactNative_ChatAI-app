@@ -39,5 +39,23 @@ const useStyles = makeStyles(({colors}) => ({
     fontFamily: fontFamilySetup.regular,
     color: colors.black1,
   },
+  footer:{
+
+  },
+  button:{
+    width: '100%',
+    height: HEIGHT * 0.07,
+    borderRadius: normalize(100),
+    backgroundColor: colors.blue,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  txtbutton:{
+    fontFamily: fontFamilySetup.regular,
+    fontSize: normalize(18),
+    fontWeight: '700',
+    letterSpacing: normalize(0.2),
+    color: colors.whiteDefault,
+  }
 }));
 export default useStyles;

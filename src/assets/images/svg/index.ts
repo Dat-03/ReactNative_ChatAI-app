@@ -1,4 +1,5 @@
 export {default as LogoIcon} from './components/Logo';
+export {default as LogoIcon_outline} from './components/Logo_outline';
 export {default as DefaultAvatar} from './components/Default_avatar';
 export {default as LobbyImage} from './components/LobbyImage';
 export {default as OnboardImage1} from './components/OnboardImage1';

@@ -10,6 +10,7 @@ export enum routes {
 
   // Chat
   CHAT = 'CHAT',
+  DETAIL_CHAT = 'DETAIL_CHAT',
 
   // Assistant
   ASSISTANT = 'ASSISTANT',

@@ -1,4 +1,4 @@
-import {View} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import {Button, Text} from '@rneui/base';
 
 import React, {FunctionComponent} from 'react';
@@ -19,12 +19,15 @@ const Chat: FunctionComponent = () => {
 
         <Text style={styles.text}>Welcome to</Text>
         <Text style={styles.text}>Wibu AI 👋</Text>
-        <View style={{paddingVertical:25}}>
-          <Text style={styles.textsmall}>
-            Start chatting with ChattyAI now.
-          </Text>
+        <View style={{paddingVertical: 25}}>
+          <Text style={styles.textsmall}>Start chatting with Wibu AI now.</Text>
           <Text style={styles.textsmall}>You can ask me anything.</Text>
         </View>
+      </View>
+      <View style={styles.footer}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.txtbutton}>Start Chat</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
