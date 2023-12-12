@@ -74,16 +74,13 @@ const SignIn: FunctionComponent = () => {
         },
       }),
     );
-
-    
   };
 
   return (
     <KeyboardAvoidingView
       style={styles.wrapper}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : -250}
-      >
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : -250}>
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={styles.body}>
           <Header
@@ -140,7 +137,7 @@ const SignIn: FunctionComponent = () => {
                 nameIcon="logo-facebook"
                 typeIcon="ionicon"
                 isIonicons
-                colorIcon='#2079FF'
+                colorIcon="#2079FF"
                 onPressButton={() => {
                   showToast();
                 }}

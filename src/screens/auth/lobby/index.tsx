@@ -2,13 +2,13 @@ import LottieView from 'lottie-react-native';
 import React from 'react';
 import {KeyboardAvoidingView, Text, TouchableOpacity, View} from 'react-native';
 import {images} from '../../../assets';
-import {GoogleIcon} from '../../../assets/icons';
 import {routes} from '../../../constants';
 import {useAppDispatch} from '../../../hooks';
 import {NavigationService} from '../../../navigation';
 import {AuthActions} from '../../../redux/reducer';
 import usestyles from './styles';
 import {Headers} from '../../../components';
+import { GoogleIcon } from '../../../assets/icons';
 
 const LobbyScreen: React.FunctionComponent = () => {
   const styles = usestyles();

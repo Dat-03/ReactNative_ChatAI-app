@@ -20,6 +20,7 @@ const Slider = () => {
   const styles = useStyles();
 
   const handleReady = () => {
+    //@ts-ignore
     dispatch(AppActions.handleReady(true));
     NavigationService.navigate(routes.LOBBY);
   };

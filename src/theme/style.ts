@@ -1,34 +1,38 @@
 import {createTheme} from '@rneui/themed';
+import {useAppSelector} from '../hooks';
+import {getMode} from '../redux/selectors/thems.selector';
+
+const mode = useAppSelector(getMode);
+
+declare module '@rneui/themed' {
+  export interface Colors {
+    black1: string;
+  }
+}
 
 export const theme = createTheme({
   lightColors: {
-    primary: '#F89300',
-    secondary: '#FEF4E6',
-    greyOutline: '#F9f9f9',
-    grey5: '#B0B3B8',
-    grey4: '#727272',
-    divider: '#e3f3ff',
-    grey1: '#F5F5F5',
-    black:'#000',
-    grey0:'#FFFFFF',
-    
+    black: '#000000',
+    white: '#ffffff',
+    black1:'#616161',
   },
   darkColors: {
-    primary: '#F89300',
-    secondary: '#FEF4E6',
-    greyOutline: '#F9f9f9',
-    grey5: '#B0B3B8',
-    grey4: '#f1f1f4',
-    divider: '#e3f3ff',
-    grey1: '#1f222a',
-    black:'#E4E6EB',
-    grey0:'#FFFFFF'
+    black: '#ffffff',
+    white: '#000000',
+    black1:'#ffffff',
+
   },
-  mode: 'light',
-  components:{
-    
-  }
- 
-  
-   
+  components: {
+    Button: (props, theme) => ({
+      containerStyle: {
+        backgroundColor: theme.colors.background,
+        height: 100,
+        width: 100,
+      },
+      titleStyle: {
+        fontSize: 20,
+      },
+    }),
+  },
+  mode: mode,
 });

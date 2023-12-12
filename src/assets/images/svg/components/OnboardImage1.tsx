@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Svg, {SvgProps, Path, Defs, Pattern, Use, Image} from 'react-native-svg';
 import {memo} from 'react';
-const SvgComponent = (props: SvgProps) => (
+const OnbroardImage1 = (props: SvgProps) => (
   <Svg
+  //@ts-ignore
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={428}
@@ -27,5 +28,4 @@ const SvgComponent = (props: SvgProps) => (
     </Defs>
   </Svg>
 );
-const OnboardImage1 = memo(SvgComponent);
-export default OnboardImage1;
+export default OnbroardImage1;

@@ -1,7 +1,5 @@
 import {makeStyles, normalize} from '@rneui/themed';
 
-import {color, fonts} from '@rneui/base';
-
 import {Dimensions} from 'react-native';
 import {Device} from '../../../utils';
 
@@ -17,8 +15,7 @@ const useStyles = makeStyles(({colors}) => ({
   },
   image: {
     flex: 0.6,
-    width: width *0.9,
-   
+    width: width * 0.9,
   },
   content: {
     flex: 0.4,

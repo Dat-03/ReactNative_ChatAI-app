@@ -8,8 +8,9 @@ import Svg, {
   Image,
 } from "react-native-svg"
 import { memo } from "react"
-const SvgComponent = (props: SvgProps) => (
+const Default_avatar = (props: SvgProps) => (
   <Svg
+  //@ts-ignore
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={24}
@@ -36,5 +37,4 @@ const SvgComponent = (props: SvgProps) => (
     </Defs>
   </Svg>
 )
-const Memo = memo(SvgComponent)
-export default Memo
+export default Default_avatar

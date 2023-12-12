@@ -8,11 +8,12 @@ import Svg, {
   Image,
 } from "react-native-svg"
 import { memo } from "react"
-import { Device } from '../../utils'
+import { Device } from '../../../../utils'
 const WIDTH = Device.getDeviceWidth() / 1;
 const HEIGHT = Device.getDeviceHeight() / 1;
-const SvgComponent = (props: SvgProps) => (
+const OnbroardImage3 = (props: SvgProps) => (
   <Svg
+  //@ts-ignore
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={WIDTH}
@@ -39,5 +40,4 @@ const SvgComponent = (props: SvgProps) => (
     </Defs>
   </Svg>
 )
-const OnboardImage3 = memo(SvgComponent)
-export default OnboardImage3
+export default OnbroardImage3
