@@ -5,6 +5,8 @@ import React, {FunctionComponent} from 'react';
 
 import {LogoIcon} from '../../../../assets/images/svg';
 import useStyles from './styles';
+import {NavigationService} from '../../../..';
+import {routes} from '../../../../constants';
 
 const Chat: FunctionComponent = () => {
   const styles = useStyles();
@@ -25,7 +27,9 @@ const Chat: FunctionComponent = () => {
         </View>
       </View>
       <View style={styles.footer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => NavigationService.navigate(routes.DETAIL_CHAT)}>
           <Text style={styles.txtbutton}>Start Chat</Text>
         </TouchableOpacity>
       </View>

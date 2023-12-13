@@ -4,13 +4,20 @@ import useStyles from './styles';
 import {Icon} from '@rneui/themed';
 import Logo_outline from '../../../../assets/images/svg/components/Logo_outline';
 import {Button_Send, LogoIcon_outline} from '../../../../assets/images/svg';
+import {NavigationService} from '../../../..';
 
 const Detail_Chat: React.FC = () => {
   const styles = useStyles();
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Icon name="arrowleft" type="antdesign" style={styles.iconHeader} size={28}/>
+        <Icon
+          name="arrowleft"
+          type="antdesign"
+          style={styles.iconHeader}
+          size={28}
+          onPress={() => NavigationService.goBack()}
+        />
         <Text style={styles.txtHeader}>Wibu AI</Text>
       </View>
       <View style={styles.content}>
