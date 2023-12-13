@@ -1,11 +1,55 @@
-import { StyleSheet } from 'react-native';
+import {makeStyles, normalize} from '@rneui/themed';
+import {Device} from '../../../../utils';
+import {fontFamilySetup} from '../../../../utils/font';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
+const WIDTH = Device.getDeviceWidth();
+const HEIGHT = Device.getDeviceHeight();
 
-export default styles;
+const useStyles = makeStyles(({colors}) => ({
+  container: {
+    flex: 1,
+    padding: normalize(20),
+  },
+  header: {
+    flexDirection: 'row',
+  },
+  txtHeader: {
+    fontFamily: fontFamilySetup.bold,
+    fontSize: normalize(24),
+    fontWeight: '700',
+    letterSpacing: normalize(1),
+    color: colors.black,
+    paddingHorizontal: normalize(68),
+  },
+  content: {},
+  avatar: {
+    width: WIDTH * 0.22,
+    height: HEIGHT * 0.1,
+    borderRadius: normalize(99),
+    backgroundColor: colors.gray,
+  },
+  viewUser: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: normalize(20),
+    justifyContent: 'space-between',
+  },
+  btnUser: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent:'space-between'
+  },
+  nameUser: {
+    color: colors.black2,
+    fontSize: normalize(20),
+    fontWeight: '700',
+    fontFamily: fontFamilySetup.bold,
+  },
+  email: {
+    color: colors.black1,
+    fontSize: normalize(14),
+    fontWeight: '500',
+    letterSpacing: normalize(0.2),
+  },
+}));
+export default useStyles;
