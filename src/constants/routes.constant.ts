@@ -17,6 +17,7 @@ export enum routes {
 
   // History
   HISTORY = 'HISTORY',
+  SEARCH_HISTORY = 'SEARCH_HISTORY',
 
   // Account
   ACCOUNT = 'ACCOUNT',

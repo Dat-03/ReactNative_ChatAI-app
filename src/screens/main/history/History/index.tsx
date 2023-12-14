@@ -7,6 +7,8 @@ import {Icon} from '@rneui/themed';
 import {LogoIcon} from '../../../../assets/images/svg';
 import {List_History} from './components';
 import useStyles from './styles';
+import {NavigationService} from '../../../..';
+import {routes} from '../../../../constants';
 
 const History: FunctionComponent = () => {
   const styles = useStyles();
@@ -16,7 +18,8 @@ const History: FunctionComponent = () => {
         <LogoIcon width={45} height={60} viewBox="0 -120 1 400" />
         <Text style={styles.txtHeader}>History</Text>
         <View style={styles.iconHeader}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => NavigationService.navigate(routes.SEARCH_HISTORY)}>
             <Icon name="search-outline" type="ionicon" />
           </TouchableOpacity>
           <TouchableOpacity>

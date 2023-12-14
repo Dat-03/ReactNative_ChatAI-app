@@ -31,13 +31,13 @@ const useStyles = makeStyles(({colors}) => ({
   viewUser: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: normalize(20),
-    justifyContent: 'space-between',
+    gap: normalize(20),
   },
   btnUser: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent:'space-between'
+    justifyContent: 'space-between',
+    gap: normalize(90),
   },
   nameUser: {
     color: colors.black2,

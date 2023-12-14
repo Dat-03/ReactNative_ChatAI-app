@@ -4,6 +4,7 @@ import useStyles from './styles';
 import {LogoIcon} from '../../../../assets/images/svg';
 import {images} from '../../../..';
 import {Icon} from '@rneui/themed';
+import BtnVip from '../../../../assets/images/svg/components/BtnVIP';
 
 const Account: FunctionComponent = () => {
   const styles = useStyles();
@@ -14,29 +15,22 @@ const Account: FunctionComponent = () => {
         <Text style={styles.txtHeader}>Account</Text>
       </View>
       <View style={styles.content}>
-        {/* <View style={styles.viewUser}>
-          <View style={{flexDirection: 'row', alignItems: 'center', gap: 20}}>
-            <Image style={styles.avatar} source={images.avatarDummy} />
-            <TouchableOpacity style={styles.btnUser}>
-              <Text style={styles.nameUser}>Peter Ken</Text>
-              <Text style={styles.email}>ken@gmail.com</Text>
-            </TouchableOpacity>
-          </View>
-          <Icon name="chevron-forward-outline" type="ionicon" />
-        </View> */}
-        <View style={{flexDirection: 'row',alignItems:'center',gap:20}}>
+        <View style={styles.viewUser}>
           <Image style={styles.avatar} source={images.avatarDummy} />
           <TouchableOpacity style={styles.btnUser}>
             <View>
               <Text style={styles.nameUser}>Peter Ken</Text>
               <Text style={styles.email}>ken@gmail.com</Text>
             </View>
-
-            <View style={{}}>
+            <View>
               <Icon name="chevron-forward-outline" type="ionicon" />
             </View>
           </TouchableOpacity>
         </View>
+        <TouchableOpacity>
+          <BtnVip width={'100%'} height={120} viewBox="10 -1 400 120" />
+        </TouchableOpacity>
+        <Text>General</Text>
       </View>
     </View>
   );

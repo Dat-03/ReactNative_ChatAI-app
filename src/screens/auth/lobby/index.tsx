@@ -8,32 +8,32 @@ import {NavigationService} from '../../../navigation';
 import {AuthActions} from '../../../redux/reducer';
 import usestyles from './styles';
 import {Headers} from '../../../components';
-import { GoogleIcon } from '../../../assets/icons';
+import {GoogleIcon} from '../../../assets/icons';
 
 const LobbyScreen: React.FunctionComponent = () => {
   const styles = usestyles();
 
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
-  const handleGoogle = async () => {
-    dispatch(
-      AuthActions.handleLoginGoogle({
-        device_token: '1234567890',
-      }),
-    );
-  };
+  // const handleGoogle = async () => {
+  //   dispatch(
+  //     AuthActions.handleLoginGoogle({
+  //       device_token: '1234567890',
+  //     }),
+  //   );
+  // };
 
   return (
     <KeyboardAvoidingView style={styles.container}>
       <View style={styles.container}>
-        <Headers rightIcon={true}  leftIcon title='khai'/>
+        <Headers rightIcon={true} leftIcon title="khai" />
         <View style={styles.header}>
-          <LottieView
+          {/* <LottieView
             style={styles.headerIMage}
             source={images.logo}
             autoPlay
             loop={false}
-          />
+          /> */}
         </View>
         <View style={styles.body}>
           <View style={styles.viewTitle}>
@@ -47,7 +47,10 @@ const LobbyScreen: React.FunctionComponent = () => {
             Newsly is a social network that allows you to connect with friends
           </Text>
           <View style={styles.bottom}>
-            <TouchableOpacity style={styles.button} onPress={handleGoogle}>
+            <TouchableOpacity
+              style={styles.button}
+              // onPress={handleGoogle}
+            >
               <GoogleIcon />
               <Text style={styles.buttonText}> Continue with Google</Text>
             </TouchableOpacity>

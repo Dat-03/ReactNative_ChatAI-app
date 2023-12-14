@@ -7,4 +7,5 @@ export const jsonFiles = {
   success: require('./success.json'),
   cat: require('./cat.json'),
   onboard1: require('./onboard1.json'),
+  not_found: require('./not_found.json'),
 };
