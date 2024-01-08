@@ -8,10 +8,12 @@ const HEIGHT = Device.getDeviceHeight();
 const useStyles = makeStyles(({colors}) => ({
   container: {
     flex: 1,
-    padding: normalize(20),
+    backgroundColor: colors.white,
+    paddingHorizontal: normalize(10),
   },
   header: {
     flexDirection: 'row',
+    paddingTop: normalize(15),
   },
   txtHeader: {
     fontFamily: fontFamilySetup.bold,
@@ -21,7 +23,9 @@ const useStyles = makeStyles(({colors}) => ({
     color: colors.black,
     paddingHorizontal: normalize(68),
   },
-  content: {},
+  content: {
+    paddingHorizontal: normalize(10),
+  },
   avatar: {
     width: WIDTH * 0.22,
     height: HEIGHT * 0.1,
@@ -37,7 +41,7 @@ const useStyles = makeStyles(({colors}) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    gap: normalize(90),
+    gap: normalize(75),
   },
   nameUser: {
     color: colors.black2,
@@ -50,6 +54,27 @@ const useStyles = makeStyles(({colors}) => ({
     fontSize: normalize(14),
     fontWeight: '500',
     letterSpacing: normalize(0.2),
+  },
+  general: {},
+  viewgeneral: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: normalize(15),
+  },
+  line: {
+    borderWidth: 0.5,
+    width: '80%',
+    height: normalize(1),
+    marginStart: normalize(10),
+    color: colors.gray3,
+  },
+  txtTitle: {
+    fontSize: normalize(14),
+    fontWeight: '600',
+    fontFamily: fontFamilySetup.medium,
+    color: colors.gray3,
+    letterSpacing: normalize(0.2),
+    lineHeight: normalize(20),
   },
 }));
 export default useStyles;

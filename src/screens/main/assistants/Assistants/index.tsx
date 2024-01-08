@@ -10,7 +10,7 @@ const Assistants: FunctionComponent = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <LogoIcon width={45} height={60} viewBox="0 0 200 400" />
+        <LogoIcon width={50} height={60} viewBox="0 -30 240 400" />
         <Text style={styles.txtHeader}>AI Assistants</Text>
       </View>
     </View>

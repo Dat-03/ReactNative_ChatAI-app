@@ -6,4 +6,5 @@ export {default as OnboardImage1} from './components/OnboardImage1';
 export {default as OnboardImage2} from './components/OnboardImage2';
 export {default as OnboardImage3} from './components/OnboardImage3';
 export {default as Button_Send} from './components/BtnSend';
+export {default as Calender_icon} from './components/Calender';
 export const SvgImages = {};

@@ -23,7 +23,7 @@ const useStyles = makeStyles(({colors}) => ({
     paddingVertical: normalize(10),
   },
   txtTitle: {
-    color: colors.black2,
+    color: colors.blackDefault,
     fontFamily: fontFamilySetup.bold,
     fontWeight: '700',
     letterSpacing: normalize(0.1),
@@ -31,11 +31,25 @@ const useStyles = makeStyles(({colors}) => ({
     width: normalize(275),
   },
   txtDate: {
-    color: colors.black1,
+    color: colors.blackDefault,
     fontSize: normalize(10),
     fontWeight: '400',
     letterSpacing: normalize(0.1),
     fontFamily: fontFamilySetup.regular,
+  },
+  button1: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
+  deleteButton: {
+    backgroundColor: 'red',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 100,
   },
 }));
 export default useStyles;

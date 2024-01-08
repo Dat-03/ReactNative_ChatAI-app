@@ -21,4 +21,10 @@ export enum routes {
 
   // Account
   ACCOUNT = 'ACCOUNT',
+  PERSONAL_INFO = 'PERSONAL_INFO',
+  SECURITY = 'SECURITY',
+  LANGUAGE = 'LANGUAGE',
+  HELP_CENTER = 'HELP_CENTER',
+
+
 }

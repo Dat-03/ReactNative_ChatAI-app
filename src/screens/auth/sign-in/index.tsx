@@ -25,7 +25,7 @@ import {AuthActions} from '../../../redux/reducer';
 import useStyles from './styles';
 import {Toast} from 'react-native-toast-message/lib/src/Toast';
 import {AlertActions} from '../../../redux/reducer/alert.reducer';
-import {images} from '../../../assets';
+import {jsonFiles} from '../../../assets/json';
 
 const SignIn: FunctionComponent = () => {
   const styles = useStyles();
@@ -65,7 +65,7 @@ const SignIn: FunctionComponent = () => {
       AlertActions.setDataAlert({
         title: 'LOGIN SUCCESS',
         description: 'Are you sure you want to logout? ',
-        imageTitle: images.cat,
+        imageTitle: jsonFiles.cat,
         isAccept: true,
         isCancel: true,
 

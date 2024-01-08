@@ -3,6 +3,8 @@ import {Device} from '../../../utils';
 import {StyleSheet} from 'react-native';
 const PADDING = 40;
 Device.getDeviceWidth();
+const WIDTH = Device.getDeviceWidth();
+const HEIGHT = Device.getDeviceHeight();
 const useStyles = makeStyles(({colors}) => ({
   container: {
     alignItems: 'center',

@@ -9,6 +9,7 @@ const useStyles = makeStyles(({colors}) => ({
   container: {
     flex: 1,
     padding: normalize(20),
+    backgroundColor: colors.white,
   },
   header: {
     flexDirection: 'row',

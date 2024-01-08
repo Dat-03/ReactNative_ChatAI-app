@@ -1,11 +1,10 @@
-import {View, Text} from 'react-native';
-import React from 'react';
-import useStyles from './styles';
-import Search_c from '../../../../components/customs/Search';
 import {Icon} from '@rneui/themed';
+import React from 'react';
+import {Text, View} from 'react-native';
 import {NavigationService} from '../../../..';
-import {routes} from '../../../../constants';
+import Search_c from '../../../../components/customs/Search';
 import Not_found from './components/not_found';
+import useStyles from './styles';
 
 const Search_history: React.FC = () => {
   const styles = useStyles();
