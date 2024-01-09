@@ -3,7 +3,7 @@ import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
-import {Icon, Text} from '@rneui/themed';
+import {Icon, Text, makeStyles} from '@rneui/themed';
 import React, {FunctionComponent, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -42,13 +42,13 @@ const choseIcon = (route: routes) => {
   }
 };
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles(({colors}) => ({
   container: {
     flexDirection: 'row',
     height: 56,
     borderTopColor: '#CCC',
     borderTopWidth: 0.5,
-    backgroundColor: '#FFF',
+    backgroundColor: colors.white,
     justifyContent: 'space-around',
   },
   box: {
@@ -60,13 +60,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     // borderRadius: WIDTH / 10,
   },
-});
+}));
 
 const AnimatedTouch = Animated.createAnimatedComponent(TouchableOpacity);
 
 const BottomNavigator: FunctionComponent = () => {
   const Tab = ({navigation, descriptors, state}: BottomTabBarProps) => {
     const progressGrowth = useSharedValue(0);
+    const styles = useStyles();
 
     //use effect will call when change tab
     useEffect(() => {
