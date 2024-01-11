@@ -2,16 +2,28 @@ import {FunctionComponent, useEffect} from 'react';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import {RootNavigation, ThemeContext} from './src';
-import Toast from 'react-native-toast-message';
-import {toastConfig} from './src/utils/toastConfig';
 import SplashScreen from 'react-native-lottie-splash-screen';
+import Toast from 'react-native-toast-message';
+import {RootNavigation, ThemeContext} from './src';
 import Alert from './src/components/customs/Alert';
 import Loading from './src/components/shared/Loading';
+import {toastConfig} from './src/utils/toastConfig';
+import {StatusBar} from 'react-native';
 
 const App: FunctionComponent = () => {
   useEffect(() => {
     SplashScreen.hide();
+  }, []);
+  useEffect(() => {
+    StatusBar.setTranslucent(true);
+    StatusBar.setBackgroundColor('transparent');
+    StatusBar.setBarStyle('dark-content');
+
+    return () => {
+      StatusBar.setTranslucent(false);
+      StatusBar.setBackgroundColor('white');
+      StatusBar.setBarStyle('dark-content');
+    };
   }, []);
   return (
     <SafeAreaProvider

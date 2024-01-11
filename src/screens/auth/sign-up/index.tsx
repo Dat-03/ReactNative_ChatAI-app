@@ -6,7 +6,7 @@ import {NavigationService} from '../../..';
 import {AppleIcon, FacebookIcon, GoogleIcon} from '../../../assets/images/svg';
 import {routes} from '../../../constants';
 
-const Sign_in: React.FC = () => {
+const Sign_up: React.FC = () => {
   const styles = useStyles();
   const [hidePassword, sethidePassword] = useState(false);
   const [checkbox, setcheckbox] = useState(false);
@@ -28,9 +28,9 @@ const Sign_in: React.FC = () => {
           style={styles.iconHeader}
           onPress={() => NavigationService.goBack()}
         />
-        <Text style={styles.txtHeader1}>Welcome back 👋</Text>
+        <Text style={styles.txtHeader1}>Hello there 👋</Text>
         <Text style={styles.txtHeader2}>
-          Please enter your email & password to log in.
+          Please enter your email & password to create an account.
         </Text>
       </View>
       <View style={styles.content}>
@@ -70,20 +70,20 @@ const Sign_in: React.FC = () => {
             color={'#201D67'}
             onPress={handleCheckbox}
           />
-          <Text style={styles.txtBox}>Remember me</Text>
+          <Text style={styles.txtBox}>
+            I agree to Qubiko AI Public Agreement, Terms, & Privacy Policy.
+          </Text>
         </View>
       </View>
       <View style={styles.footer}>
-        <Text style={styles.txtFooter4}>Forgot password?</Text>
         <View style={styles.viewtxtFooter}>
-          <Text style={styles.txtFooter1}>Don’t have an account?</Text>
+          <Text style={styles.txtFooter1}>Already have an account?</Text>
           <Text
             style={styles.txtFooter2}
-            onPress={() => NavigationService.navigate(routes.SIGN_UP)}>
-            Sign up
+            onPress={() => NavigationService.navigate(routes.SIGN_IN)}>
+            Log in
           </Text>
         </View>
-
         <View style={styles.txtOr}>
           <View style={styles.line}></View>
           <Text style={{marginHorizontal: 10}}>or continue with</Text>
@@ -101,7 +101,9 @@ const Sign_in: React.FC = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.viewButtonbig}>
-          <TouchableOpacity style={styles.buttonBig}>
+          <TouchableOpacity
+            style={styles.buttonBig}
+            onPress={() => NavigationService.navigate(routes.UPDATE_PROFILE)}>
             <Text style={styles.txtBtnBig}>Continue</Text>
           </TouchableOpacity>
         </View>
@@ -110,4 +112,4 @@ const Sign_in: React.FC = () => {
   );
 };
 
-export default Sign_in;
+export default Sign_up;

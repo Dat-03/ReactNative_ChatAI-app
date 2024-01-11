@@ -1,31 +1,35 @@
-import {Onbroad} from '../../components';
 import {routes} from '../../constants';
 import {Screen} from '../../types';
-import CreateAccount from './create-account';
-import LobbyScreen from './lobby';
-import Slider from './onboard';
-import SignIn from './sign-in';
-import UpdateProfile from './update-profile';
+import Lobby from './lobby';
+import Onbroad from './onbroad';
+import Sign_in from './sign-in';
+import Sign_up from './sign-up';
+import Update_Profile from './update-profile';
+import Welcome from './welcome';
 
 export const authScreen: Screen[] = [
   {
-    name: routes.SIGN_IN,
-    component: SignIn,
-  },
-  {
-    name: routes.CREATE_ACCOUNT,
-    component: CreateAccount,
+    name: routes.WELCOME,
+    component: Welcome,
   },
   {
     name: routes.LOBBY,
-    component: LobbyScreen,
-  },
-  {
-    name: routes.UPDATE_PROFILE,
-    component: UpdateProfile,
+    component: Lobby,
   },
   {
     name: routes.ONBOARD,
-    component: Slider,
+    component: Onbroad,
+  },
+  {
+    name: routes.SIGN_UP,
+    component: Sign_up,
+  },
+  {
+    name: routes.SIGN_IN,
+    component: Sign_in,
+  },
+  {
+    name: routes.UPDATE_PROFILE,
+    component: Update_Profile,
   },
 ];

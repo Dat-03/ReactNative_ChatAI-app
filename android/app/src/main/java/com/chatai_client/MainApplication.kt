@@ -1,4 +1,4 @@
-package com.chatai_client
+package com.ChatAI_app
 
 import android.app.Application
 import com.facebook.react.PackageList

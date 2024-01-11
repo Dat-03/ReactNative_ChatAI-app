@@ -9,7 +9,7 @@ const initialState: AlertState = {
   description: 'Can you accept this message?',
   onAccept: () => {},
   onCancel: () => {},
-  imageTitle: images.success,
+  // imageTitle: images.success,
   isAccept: false,
   isCancel: false,
 

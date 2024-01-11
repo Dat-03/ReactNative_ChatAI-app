@@ -29,7 +29,6 @@ const useStyles = makeStyles(({colors, spacing}) => ({
     color: colors.black2,
     letterSpacing: normalize(0.2),
   },
-
   content: {
     paddingVertical: normalize(20),
     gap: normalize(25),
@@ -76,8 +75,10 @@ const useStyles = makeStyles(({colors, spacing}) => ({
   viewtxtFooter: {
     flexDirection: 'row',
     gap: normalize(10),
-    paddingVertical: normalize(15),
+    borderTopWidth: normalize(0.8),
+    paddingVertical: normalize(20),
     justifyContent: 'center',
+    borderColor: colors.blue2,
   },
   txtFooter1: {
     color: colors.black2,
@@ -86,7 +87,6 @@ const useStyles = makeStyles(({colors, spacing}) => ({
     letterSpacing: normalize(0.2),
     lineHeight: normalize(25),
     fontFamily: fontFamilySetup.medium,
-    textAlign: 'center',
   },
   txtFooter2: {
     color: colors.blue4,
@@ -105,15 +105,6 @@ const useStyles = makeStyles(({colors, spacing}) => ({
     fontFamily: fontFamilySetup.medium,
     textAlign: 'center',
   },
-  txtFooter4: {
-    color: colors.blue4,
-    fontSize: normalize(16),
-    fontWeight: '700',
-    letterSpacing: normalize(0.2),
-    lineHeight: normalize(25),
-    fontFamily: fontFamilySetup.medium,
-    textAlign: 'center',
-  },
   btnFooter: {
     width: normalize(100),
     height: normalize(60),
@@ -125,7 +116,7 @@ const useStyles = makeStyles(({colors, spacing}) => ({
   },
   viewbtnFooter: {
     flexDirection: 'row',
-    gap: normalize(15),
+    gap: normalize(20),
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: normalize(20),
@@ -153,7 +144,7 @@ const useStyles = makeStyles(({colors, spacing}) => ({
   line: {
     flex: 1,
     height: 1,
-    backgroundColor: colors.gray1, // Thay 'yourColor' bằng màu bạn muốn sử dụng
+    backgroundColor: colors.gray1,
   },
   txtOr: {
     flexDirection: 'row',

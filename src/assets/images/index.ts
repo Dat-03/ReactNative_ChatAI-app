@@ -1,6 +1,3 @@
-export { default as OnboardImage1 } from './svg/components/OnboardImage1'
-export  { default as OnboardImage2 } from './svg/components/OnboardImage2'
-export  { default as OnboardImage3 } from './svg/components/OnboardImage3'
-export  { default as LobbyImage } from './svg/components/LobbyImage'
-export  { default as Default_avatar } from './svg/components/Default_avatar'
-export * from './png'
+export {default as LobbyImage} from './svg/components/LobbyImage';
+export {default as Default_avatar} from './svg/components/Default_avatar';
+export * from './png';
