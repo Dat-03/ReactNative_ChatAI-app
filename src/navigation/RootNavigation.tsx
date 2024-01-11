@@ -1,12 +1,10 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React, {useEffect} from 'react';
+import {StatusBar} from 'react-native';
 import {useAppSelector} from '../hooks';
 import {getAuthEnableSignIn} from '../redux/selectors/auth.selector';
 import {navigationRef} from './NavigationService';
-import AppNavigator from './navigators/AppNavigator';
 import AuthNavigator from './navigators/AuthNavigator';
-import Onbroad from '../screens/auth/onbroad';
-import {StatusBar} from 'react-native';
 
 const RootNavigation = () => {
   const enableSignIn: boolean = useAppSelector(getAuthEnableSignIn);
