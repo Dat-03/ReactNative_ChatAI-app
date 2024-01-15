@@ -8,15 +8,37 @@ import {routes} from '../../../constants';
 
 const Sign_in: React.FC = () => {
   const styles = useStyles();
-  const [hidePassword, sethidePassword] = useState(false);
-  const [checkbox, setcheckbox] = useState(false);
+  const [hidePassword, setHidePassword] = useState(false);
+  const [checkbox, setCheckbox] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [emailFocused, setEmailFocused] = useState(false);
+  const [passwordFocused, setPasswordFocused] = useState(false);
+
   const handleCheckbox = () => {
-    setcheckbox(!checkbox);
+    setCheckbox(!checkbox);
   };
 
   const handleHidePassword = () => {
-    sethidePassword(!hidePassword);
+    setHidePassword(!hidePassword);
   };
+
+  const handleEmailFocus = () => {
+    setEmailFocused(true);
+  };
+
+  const handleEmailBlur = () => {
+    setEmailFocused(false);
+  };
+
+  const handlePasswordFocus = () => {
+    setPasswordFocused(true);
+  };
+
+  const handlePasswordBlur = () => {
+    setPasswordFocused(false);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -36,28 +58,48 @@ const Sign_in: React.FC = () => {
       <View style={styles.content}>
         <View style={styles.viewInput}>
           <Text style={styles.txtTitle}>Email address</Text>
-          <View style={styles.inputContainer}>
-            <TextInput placeholder="Email" style={styles.input} />
+          <View
+            style={[
+              styles.inputContainer,
+              emailFocused && {borderColor: '#7E92F8'},
+            ]}>
+            <TextInput
+              placeholder="Email"
+              style={[styles.input, emailFocused && {borderColor: '#7E92F8'}]}
+              onFocus={handleEmailFocus}
+              onBlur={handleEmailBlur}
+              onChangeText={text => setEmail(text)}
+            />
             <Icon
               name="mail"
               type="ionicon"
-              color={'#9E9E9E'}
+              color={emailFocused ? '#7E92F8' : '#9E9E9E'}
               style={styles.iconInput}
             />
           </View>
         </View>
         <View style={styles.viewInput}>
           <Text style={styles.txtTitle}>Password</Text>
-          <View style={styles.inputContainer}>
+          <View
+            style={[
+              styles.inputContainer,
+              passwordFocused && {borderColor: '#7E92F8'},
+            ]}>
             <TextInput
               placeholder="Password"
               secureTextEntry={hidePassword}
-              style={styles.input}
+              style={[
+                styles.input,
+                passwordFocused && {borderColor: '#7E92F8'},
+              ]}
+              onFocus={handlePasswordFocus}
+              onBlur={handlePasswordBlur}
+              onChangeText={text => setPassword(text)}
             />
             <Icon
               name={hidePassword ? 'eye-off' : 'eye'}
               type="ionicon"
-              color={'#717FF3'}
+              color={passwordFocused ? '#7E92F8' : '#9E9E9E'}
               style={styles.iconInput}
               onPress={handleHidePassword}
             />
@@ -74,7 +116,10 @@ const Sign_in: React.FC = () => {
         </View>
       </View>
       <View style={styles.footer}>
-        <Text style={styles.txtFooter4}>Forgot password?</Text>
+        <TouchableOpacity
+          onPress={() => NavigationService.navigate(routes.FORGOT_PASSWORD)}>
+          <Text style={styles.txtFooter4}>Forgot password?</Text>
+        </TouchableOpacity>
         <View style={styles.viewtxtFooter}>
           <Text style={styles.txtFooter1}>Don’t have an account?</Text>
           <Text
@@ -83,7 +128,6 @@ const Sign_in: React.FC = () => {
             Sign up
           </Text>
         </View>
-
         <View style={styles.txtOr}>
           <View style={styles.line}></View>
           <Text style={{marginHorizontal: 10}}>or continue with</Text>

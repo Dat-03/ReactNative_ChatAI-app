@@ -8,6 +8,7 @@ export enum routes {
   WELCOME = 'WELCOME',
   BOTTOM_TAB = 'BOTTOM_TAB',
   UPDATE_PROFILE = 'UPDATE_PROFILE',
+  FORGOT_PASSWORD = 'FORGOT_PASSWORD',
 
   // Chat
   CHAT = 'CHAT',

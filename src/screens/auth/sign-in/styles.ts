@@ -42,6 +42,7 @@ const useStyles = makeStyles(({colors, spacing}) => ({
     paddingHorizontal: normalize(15),
     backgroundColor: colors.white2,
     marginTop: normalize(20),
+    borderWidth: normalize(1),
   },
   input: {
     flex: 1,
