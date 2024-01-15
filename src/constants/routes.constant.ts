@@ -9,7 +9,7 @@ export enum routes {
   BOTTOM_TAB = 'BOTTOM_TAB',
   UPDATE_PROFILE = 'UPDATE_PROFILE',
   FORGOT_PASSWORD = 'FORGOT_PASSWORD',
-
+  OTP = 'OTP',
   // Chat
   CHAT = 'CHAT',
   DETAIL_CHAT = 'DETAIL_CHAT',

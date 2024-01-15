@@ -1,6 +1,7 @@
 import {routes} from '../../constants';
 import {Screen} from '../../types';
 import Forgot_Password from './Forgot-password';
+import OTP from './OTP';
 import Lobby from './lobby';
 import Onbroad from './onbroad';
 import Sign_in from './sign-in';
@@ -36,5 +37,9 @@ export const authScreen: Screen[] = [
   {
     name: routes.FORGOT_PASSWORD,
     component: Forgot_Password,
+  },
+  {
+    name: routes.OTP,
+    component: OTP,
   },
 ];

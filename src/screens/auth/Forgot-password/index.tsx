@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import useStyles from './styles';
 import {Icon} from '@rneui/themed';
 import {NavigationService} from '../../..';
+import {routes} from '../../../constants';
 
 const Forgot_Password: React.FC = () => {
   const styles = useStyles();
@@ -66,7 +67,9 @@ const Forgot_Password: React.FC = () => {
         </View>
       </View>
       <View style={styles.footer}>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => NavigationService.navigate(routes.OTP)}>
           <Text style={styles.txtBtn}>Continue</Text>
         </TouchableOpacity>
       </View>
