@@ -84,5 +84,25 @@ const useStyles = makeStyles(({colors, spacing}) => ({
     letterSpacing: normalize(0.2),
     lineHeight: normalize(25),
   },
+  footer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  btn: {
+    borderRadius: normalize(50),
+    paddingVertical: normalize(15),
+    backgroundColor: colors.blue1,
+    marginTop: normalize(20),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  txtTitle: {
+    marginStart: normalize(10),
+    color: colors.white,
+    fontSize: normalize(16),
+    fontWeight: '700',
+    letterSpacing: normalize(0.2),
+    fontFamily: fontFamilySetup.bold,
+  },
 }));
 export default useStyles;

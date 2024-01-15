@@ -1,8 +1,9 @@
-import {View, Text, TextInput} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import useStyles from './styles';
 import {NavigationService} from '../../..';
 import {Icon} from '@rneui/themed';
+import {routes} from '../../../constants';
 
 const OTP: React.FC = () => {
   const styles = useStyles();
@@ -82,6 +83,13 @@ const OTP: React.FC = () => {
             </Text>
           </View>
         </View>
+      </View>
+      <View style={styles.footer}>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => NavigationService.navigate(routes.CREATE_PASSWORD)}>
+          <Text style={styles.txtTitle}>Continue</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
