@@ -5,6 +5,7 @@ import {useAppSelector} from '../hooks';
 import {getAuthEnableSignIn} from '../redux/selectors/auth.selector';
 import {navigationRef} from './NavigationService';
 import AuthNavigator from './navigators/AuthNavigator';
+import ScreenText from '../screens/auth/Text';
 
 const RootNavigation = () => {
   const enableSignIn: boolean = useAppSelector(getAuthEnableSignIn);
@@ -13,7 +14,6 @@ const RootNavigation = () => {
     StatusBar.setTranslucent(true);
     StatusBar.setBackgroundColor('transparent');
     StatusBar.setBarStyle('dark-content');
-
     return () => {
       StatusBar.setTranslucent(false);
       StatusBar.setBackgroundColor('white');
