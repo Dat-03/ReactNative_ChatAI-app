@@ -8,14 +8,15 @@ const HEIGHT = Device.getDeviceHeight();
 const useStyles = makeStyles(({colors}) => ({
   container: {
     flex: 1,
-    padding: normalize(20),
+    paddingHorizontal: normalize(20),
     backgroundColor: colors.white,
+    paddingVertical: normalize(30),
   },
   header: {
     flexDirection: 'row',
   },
   txtHeader: {
-    paddingHorizontal: normalize(80),
+    paddingHorizontal: normalize(75),
     fontFamily: fontFamilySetup.bold,
     fontSize: normalize(24),
     fontWeight: '700',
@@ -25,6 +26,7 @@ const useStyles = makeStyles(({colors}) => ({
   content: {
     paddingVertical: normalize(40),
     alignItems: 'center',
+    gap: normalize(10),
   },
   text: {
     fontFamily: fontFamilySetup.bold,
@@ -34,16 +36,17 @@ const useStyles = makeStyles(({colors}) => ({
     color: colors.black,
   },
   textsmall: {
-    width: WIDTH * 0.7,
-    letterSpacing: normalize(1),
+    letterSpacing: normalize(0.5),
     lineHeight: normalize(30),
     fontFamily: fontFamilySetup.regular,
     color: colors.black1,
+    textAlign: 'center',
   },
-  footer:{
-
+  footer: {
+    flex: 1,
+    paddingVertical: normalize(60),
   },
-  button:{
+  button: {
     width: '100%',
     height: HEIGHT * 0.07,
     borderRadius: normalize(100),
@@ -51,12 +54,12 @@ const useStyles = makeStyles(({colors}) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  txtbutton:{
+  txtbutton: {
     fontFamily: fontFamilySetup.regular,
     fontSize: normalize(18),
     fontWeight: '700',
     letterSpacing: normalize(0.2),
     color: colors.whiteDefault,
-  }
+  },
 }));
 export default useStyles;

@@ -12,6 +12,7 @@ import {Avatar_btn} from './components';
 import useStyles from './styles';
 import CountryCodeDropdownPicker from 'react-native-dropdown-country-picker';
 import SelectDropdown from 'react-native-select-dropdown';
+import {routes} from '../../../constants';
 
 const Update_Profile: React.FC = () => {
   const styles = useStyles();
@@ -135,7 +136,9 @@ const Update_Profile: React.FC = () => {
           />
         </View>
         <View style={styles.footer}>
-          <TouchableOpacity style={styles.btnSkip}>
+          <TouchableOpacity
+            style={styles.btnSkip}
+            onPress={() => NavigationService.navigate(routes.CHAT)}>
             <Text style={styles.txtSkip}>Skip</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btnNext}>

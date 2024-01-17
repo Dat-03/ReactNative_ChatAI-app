@@ -21,7 +21,7 @@ const Chat: FunctionComponent = () => {
 
         <Text style={styles.text}>Welcome to</Text>
         <Text style={styles.text}>Wibu AI 👋</Text>
-        <View style={{paddingVertical: 25}}>
+        <View style={{paddingVertical: 25, alignItems: 'center'}}>
           <Text style={styles.textsmall}>Start chatting with Wibu AI now.</Text>
           <Text style={styles.textsmall}>You can ask me anything.</Text>
         </View>

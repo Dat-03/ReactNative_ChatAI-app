@@ -64,7 +64,7 @@ const useStyles = makeStyles(({colors}) => ({
     paddingVertical: normalize(20),
   },
   viewAll: {
-    gap: normalize(20),
+    paddingVertical: normalize(20),
   },
   viewSearch: {
     paddingHorizontal: normalize(25),

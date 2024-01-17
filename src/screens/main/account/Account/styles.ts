@@ -9,11 +9,11 @@ const useStyles = makeStyles(({colors}) => ({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    paddingHorizontal: normalize(10),
+    paddingHorizontal: normalize(24),
+    paddingVertical: normalize(30),
   },
   header: {
     flexDirection: 'row',
-    paddingTop: normalize(15),
   },
   txtHeader: {
     fontFamily: fontFamilySetup.bold,
@@ -23,9 +23,7 @@ const useStyles = makeStyles(({colors}) => ({
     color: colors.black,
     paddingHorizontal: normalize(68),
   },
-  content: {
-    paddingHorizontal: normalize(10),
-  },
+  content: {},
   avatar: {
     width: WIDTH * 0.22,
     height: HEIGHT * 0.1,

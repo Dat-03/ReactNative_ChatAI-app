@@ -70,9 +70,6 @@ const ItemFAQ: React.FC = () => {
           <View key={category.key}>
             {shouldShowAllItems || selectedCategory === category.key ? (
               <View style={styles.viewAll}>
-                <View style={styles.viewText}>
-                  <Text style={styles.textApp}>{category.label}</Text>
-                </View>
                 {category.key === 'app' && <Toggleable_App />}
                 {category.key === 'security' && <Toggleable_Security />}
                 {category.key === 'service' && <Toggleable_Service />}
