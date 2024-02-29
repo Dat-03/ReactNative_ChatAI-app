@@ -1,11 +1,11 @@
-import {View, Text} from 'react-native';
-import React, {useEffect} from 'react';
-import useStyles from './styles';
-import {LogoIcon} from '../../../assets/images/svg';
-import Loading_Main from './loading';
 import {useNavigation} from '@react-navigation/native';
+import React, {useEffect} from 'react';
+import {Text, View} from 'react-native';
 import {NavigationService} from '../../..';
+import {LogoIcon} from '../../../assets/images/svg';
 import {routes} from '../../../constants';
+import Loading_Main from './loading';
+import useStyles from './styles';
 
 const Lobby: React.FC = () => {
   const styles = useStyles();

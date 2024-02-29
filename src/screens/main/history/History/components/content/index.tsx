@@ -1,21 +1,21 @@
+import {Icon} from '@rneui/themed';
 import React, {useState} from 'react';
 import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
   Animated,
+  Text,
   TouchableHighlight,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import useStyles from './styles';
-import {Icon} from '@rneui/themed';
 import {SwipeListView} from 'react-native-swipe-list-view';
-import {data} from './data';
 import {NavigationService} from '../../../../../..';
 import {routes} from '../../../../../../constants';
+import {ListItem, data} from './data';
+import useStyles from './styles';
 
-const List_History: React.FC = () => {
+const List_History: React.FC<ListItem> = ({listData}) => {
   const styles = useStyles();
+
   const [ListData, setListData] = useState(
     data.map((dataItem, index) => ({
       key: `${index}`,
@@ -130,19 +130,15 @@ const List_History: React.FC = () => {
       />
     );
   };
+
   return (
     <View>
       <SwipeListView
-        data={ListData}
+        data={listData}
         renderItem={renderItem}
         renderHiddenItem={renderHiddenItem}
-        leftOpenValue={75}
-        rightOpenValue={-150}
+        rightOpenValue={-75}
         disableRightSwipe
-        leftActivationValue={100}
-        rightActivationValue={-200}
-        leftActionValue={0}
-        rightActionValue={-500}
         showsVerticalScrollIndicator={false}
       />
     </View>

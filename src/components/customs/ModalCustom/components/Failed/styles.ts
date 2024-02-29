@@ -1,12 +1,16 @@
 import {makeStyles, normalize} from '@rneui/themed';
-import {fontFamilySetup} from '../../../utils/font';
 
 const useStyles = makeStyles(({colors}) => ({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    padding: normalize(20),
-    paddingVertical: normalize(40),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  lottieStyle: {
+    height: normalize(250),
+    width: normalize(250),
   },
 }));
+
 export default useStyles;

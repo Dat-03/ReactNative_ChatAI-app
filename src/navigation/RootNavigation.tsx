@@ -9,8 +9,9 @@ import ScreenText from '../screens/auth/Text';
 import AppNavigator from './navigators/AppNavigator';
 
 const RootNavigation = () => {
-  const enableSignIn: boolean = useAppSelector(getAuthEnableSignIn);
-  console.log(enableSignIn);
+  // const enableSignIn: boolean = useAppSelector(getAuthEnableSignIn);
+  // console.log(enableSignIn);
+  const enableSignIn = true;
   useEffect(() => {
     StatusBar.setTranslucent(true);
     StatusBar.setBackgroundColor('transparent');
@@ -23,8 +24,8 @@ const RootNavigation = () => {
   }, []);
   return (
     <NavigationContainer ref={navigationRef}>
-      {/* {enableSignIn ? <AppNavigator /> : <AuthNavigator />} */}
-      <AppNavigator />
+      {enableSignIn ? <AuthNavigator /> : <AppNavigator />}
+      {/* <ScreenText /> */}
     </NavigationContainer>
   );
 };

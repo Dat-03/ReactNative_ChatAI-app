@@ -1,17 +1,39 @@
-import React, {FunctionComponent} from 'react';
+import React, {FunctionComponent, useState} from 'react';
 
-import {TouchableOpacity, View} from 'react-native';
+import {Alert, TouchableOpacity, View} from 'react-native';
 
 import {Text} from '@rneui/base';
 import {Icon} from '@rneui/themed';
+import {NavigationService} from '../../../..';
 import {LogoIcon} from '../../../../assets/images/svg';
+import {routes} from '../../../../constants';
 import {List_History} from './components';
 import useStyles from './styles';
-import {NavigationService} from '../../../..';
-import {routes} from '../../../../constants';
+import {ListItem, data} from './components/content/data';
 
 const History: FunctionComponent = () => {
   const styles = useStyles();
+  const [listData, setListData] = useState<ListItem[]>(data);
+  const handleClearHistory = () => {
+    Alert.alert(
+      'Xác nhận',
+      'Bạn có chắc muốn xóa tất cả các mục?',
+      [
+        {
+          text: 'Hủy',
+          style: 'cancel',
+        },
+        {
+          text: 'Xóa',
+          onPress: () => deleteAll(),
+        },
+      ],
+      {cancelable: false},
+    );
+  };
+  const deleteAll = () => {
+    setListData([]);
+  };
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -22,13 +44,13 @@ const History: FunctionComponent = () => {
             onPress={() => NavigationService.navigate(routes.SEARCH_HISTORY)}>
             <Icon name="search-outline" type="ionicon" />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleClearHistory}>
             <Icon name="trash-outline" type="ionicon" />
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.content}>
-        <List_History />
+        <List_History listData={data}/>
       </View>
     </View>
   );

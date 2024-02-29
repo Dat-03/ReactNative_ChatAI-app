@@ -72,7 +72,7 @@ const useStyles = makeStyles(({colors}) => ({
     letterSpacing: normalize(0.2),
   },
   textBtn2: {
-    color: colors.white,
+    color: colors.whiteDefault,
     fontWeight: '700',
     fontSize: normalize(18),
     fontFamily: fontFamilySetup.bold,

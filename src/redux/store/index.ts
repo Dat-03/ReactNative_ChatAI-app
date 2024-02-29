@@ -13,6 +13,7 @@ import {
 import {AlertReducer} from '../reducer/alert.reducer';
 import RootSaga from '../sagas';
 import {Redux} from '../types/redux.type';
+import userReducer from '../reducer/user.reducer';
 
 const persistConfig: PersistConfig<RootState> = {
   key: 'root',
@@ -31,6 +32,7 @@ const rootReducers = combineReducers({
   app: AppReducer,
   alert: AlertReducer,
   theme: ThemeReducer,
+  user: userReducer,
 });
 const persistedReducer = persistReducer<RootState>(persistConfig, rootReducers);
 

@@ -11,6 +11,11 @@ export enum routes {
   FORGOT_PASSWORD = 'FORGOT_PASSWORD',
   OTP = 'OTP',
   CREATE_PASSWORD = 'CREATE_PASSWORD',
+
+  // Main
+  APPNAViGATOR = 'APPNAViGATOR',
+
+
   // Chat
   CHAT = 'CHAT',
   DETAIL_CHAT = 'DETAIL_CHAT',

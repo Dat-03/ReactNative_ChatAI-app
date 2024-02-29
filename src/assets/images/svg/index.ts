@@ -7,4 +7,5 @@ export {default as Calender_icon} from './components/Calender';
 export {default as GoogleIcon} from './components/GoogleIcon';
 export {default as AppleIcon} from './components/AppleIcon';
 export {default as FacebookIcon} from './components/FacebookIcon';
+export {default as ModalSucces} from './components/ModalSucces';
 export const SvgImages = {};

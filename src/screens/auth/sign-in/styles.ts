@@ -140,7 +140,7 @@ const useStyles = makeStyles(({colors, spacing}) => ({
     justifyContent: 'center',
   },
   txtBtnBig: {
-    color: colors.white,
+    color: colors.whiteDefault,
     fontSize: normalize(18),
     fontWeight: '700',
     letterSpacing: normalize(0.2),
@@ -154,7 +154,7 @@ const useStyles = makeStyles(({colors, spacing}) => ({
   line: {
     flex: 1,
     height: 1,
-    backgroundColor: colors.gray1, // Thay 'yourColor' bằng màu bạn muốn sử dụng
+    backgroundColor: colors.gray1,
   },
   txtOr: {
     flexDirection: 'row',

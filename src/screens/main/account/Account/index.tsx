@@ -6,9 +6,12 @@ import {images} from '../../../..';
 import {Icon} from '@rneui/themed';
 import BtnVip from '../../../../assets/images/svg/components/BtnVIP';
 import {List_About, List_General} from './components';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Account: FunctionComponent = () => {
   const styles = useStyles();
+  const dispatch = useDispatch();
+  const info = useSelector((state: any) => state.user);
   return (
     <ScrollView nestedScrollEnabled>
       <View style={styles.container}>
@@ -21,7 +24,7 @@ const Account: FunctionComponent = () => {
             <Image style={styles.avatar} source={images.avatarDummy} />
             <TouchableOpacity style={styles.btnUser}>
               <View>
-                <Text style={styles.nameUser}>Peter Ken</Text>
+                <Text style={styles.nameUser}>{info.fullname}</Text>
                 <Text style={styles.email}>ken@gmail.com</Text>
               </View>
               <View>

@@ -5,6 +5,7 @@ import {Icon} from '@rneui/themed';
 import {NavigationService} from '../../..';
 import {AppleIcon, FacebookIcon, GoogleIcon} from '../../../assets/images/svg';
 import {routes} from '../../../constants';
+import {ModalCustom} from '../../../components';
 
 const Sign_up: React.FC = () => {
   const styles = useStyles();
@@ -14,7 +15,7 @@ const Sign_up: React.FC = () => {
   const [password, setPassword] = useState('');
   const [emailFocused, setEmailFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
-
+  const [modalVisible, setModalVisible] = useState(false);
   const handleCheckbox = () => {
     setCheckbox(!checkbox);
   };
@@ -148,6 +149,7 @@ const Sign_up: React.FC = () => {
             onPress={() => NavigationService.navigate(routes.UPDATE_PROFILE)}>
             <Text style={styles.txtBtnBig}>Continue</Text>
           </TouchableOpacity>
+          <ModalCustom />
         </View>
       </View>
     </View>

@@ -145,7 +145,9 @@ const Sign_in: React.FC = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.viewButtonbig}>
-          <TouchableOpacity style={styles.buttonBig}>
+          <TouchableOpacity
+            style={styles.buttonBig}
+            onPress={() => NavigationService.navigate(routes.APPNAViGATOR)}>
             <Text style={styles.txtBtnBig}>Continue</Text>
           </TouchableOpacity>
         </View>

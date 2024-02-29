@@ -76,5 +76,7 @@ const useStyles = makeStyles(({colors}) => ({
     gap: normalize(5),
     padding: normalize(10),
   },
+
+  
 }));
 export default useStyles;

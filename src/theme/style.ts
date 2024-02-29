@@ -6,6 +6,8 @@ const mode = useAppSelector(getMode);
 
 declare module '@rneui/themed' {
   export interface Colors {
+    blackDefault: string;
+    whiteDefault: string;
     black1: string;
     black2: string;
     blue: string;
@@ -13,16 +15,15 @@ declare module '@rneui/themed' {
     blue2: string;
     blue3: string;
     blue4: string;
-    whiteDefault: string;
     white1: string;
     white2: string;
-    blackDefault: string;
     gray: string;
     gray1: string;
     gray2: string;
     gray3: string;
     gray4: string;
     gray5: string;
+    green: string;
   }
 }
 
@@ -47,6 +48,7 @@ export const theme = createTheme({
     gray3: '#9E9E9E',
     gray4: '#F4F4F4',
     gray5: '#EEEEEE',
+    green: '#17CE92',
   },
   darkColors: {
     black: '#ffffff',
@@ -60,6 +62,9 @@ export const theme = createTheme({
     blue: '#7788F5',
     blue2: '#E0E7F2',
     blue3: '#7280F3',
+    blue4: '#201D67',
+
+    green: '#17CE92',
 
     white1: '#F1F3FE',
 
@@ -73,7 +78,7 @@ export const theme = createTheme({
   components: {
     Button: (props, theme) => ({
       containerStyle: {
-        backgroundColor: theme.colors.background,
+        backgroundColor: theme.colors.white,
         height: 100,
         width: 100,
       },

@@ -22,5 +22,12 @@ const useStyles = makeStyles(({colors}) => ({
     color: colors.black,
     paddingHorizontal: normalize(45),
   },
+  text:{
+    fontFamily: fontFamilySetup.bold,
+    fontSize: normalize(20),
+    fontWeight: '400',
+    letterSpacing: normalize(1),
+    color: colors.black,
+  }
 }));
 export default useStyles;

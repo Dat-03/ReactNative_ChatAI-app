@@ -1,5 +1,7 @@
 import {routes} from '../../constants';
+import AppNavigator from '../../navigation/navigators/AppNavigator';
 import {Screen} from '../../types';
+import {Chat} from '../main';
 import Forgot_Password from './Forgot-password';
 import OTP from './OTP';
 import Create_Password from './create-password';
@@ -46,5 +48,9 @@ export const authScreen: Screen[] = [
   {
     name: routes.CREATE_PASSWORD,
     component: Create_Password,
+  },
+  {
+    name: routes.APPNAViGATOR,
+    component: AppNavigator,
   },
 ];

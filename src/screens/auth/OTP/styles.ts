@@ -98,7 +98,7 @@ const useStyles = makeStyles(({colors, spacing}) => ({
   },
   txtTitle: {
     marginStart: normalize(10),
-    color: colors.white,
+    color: colors.whiteDefault,
     fontSize: normalize(16),
     fontWeight: '700',
     letterSpacing: normalize(0.2),

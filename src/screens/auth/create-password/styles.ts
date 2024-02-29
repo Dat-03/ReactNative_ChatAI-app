@@ -70,7 +70,7 @@ const useStyles = makeStyles(({colors}) => ({
   },
   txtBtn: {
     textAlign: 'center',
-    color: colors.white,
+    color: colors.whiteDefault,
     fontSize: normalize(16),
     fontWeight: '700',
     letterSpacing: normalize(0.2),

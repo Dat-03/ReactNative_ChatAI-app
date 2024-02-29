@@ -131,7 +131,7 @@ const useStyles = makeStyles(({colors, spacing}) => ({
     justifyContent: 'center',
   },
   txtBtnBig: {
-    color: colors.white,
+    color: colors.whiteDefault,
     fontSize: normalize(18),
     fontWeight: '700',
     letterSpacing: normalize(0.2),

@@ -12,7 +12,7 @@ const useStyles = makeStyles(({colors}) => ({
   },
   header: {
     flexDirection: 'row',
-    paddingVertical: normalize(20),
+    paddingVertical: normalize(35),
     alignItems: 'center',
     justifyContent: 'center',
     gap: normalize(15),

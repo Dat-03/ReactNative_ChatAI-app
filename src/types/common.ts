@@ -26,26 +26,6 @@ export type Screen = {
   component: FunctionComponent<any>;
 };
 
-export type Pagination = {
-  page: number;
-  pageSize: number;
-  totalPage: number;
-  totalRecord: number;
-};
-
-export type BaseResponse<T> = {
-  statusCode: number;
-  responseTimestamp: Date;
-  errorMessage: string;
-  data: T;
-};
-
-export type BaseResponseList<T> = {
-  statusCode: number;
-  responseTimestamp: Date;
-  errorMessage: string;
-  data: T[];
-};
 export type Avatar = uuid &
   Timestamp & {
     public_id: string;
